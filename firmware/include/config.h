@@ -76,4 +76,5 @@
 #define MIN_FREE_HEAP 50000  // Minimum free heap before warnings (50KB)
 #define HEAP_CHECK_INTERVAL 60000 // Check heap every minute
 
-#endif // CONFIG_H
+
+#endif
