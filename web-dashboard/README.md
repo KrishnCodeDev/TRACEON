@@ -1,4 +1,4 @@
-# Logistics Monitoring System - Web Interface and Dashboard
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/9dad00de-1658-4905-b8fd-0574b619c282" /># Logistics Monitoring System - Web Interface and Dashboard
 
 A comprehensive real-time web Interface and dashboard for monitoring IoT-enabled parcels throughout their entire logistics journey. Built with React, Vite, Firebase, and Tailwind CSS, this dashboard provides role-based access control for warehouse managers, transport agents, and parcel owners to track temperature, humidity, vibration, and location data.
 
@@ -66,7 +66,7 @@ The Logistics Monitoring System tracks IoT-enabled parcels in real-time, ensurin
 
 ## 👥 User Roles & Workflows
 
-### 1. **Warehouse Manager** (Admin)
+### 1. **Warehouse Manager** 
 
 #### Responsibilities
 - Create new parcels with temperature, humidity, and vibration thresholds
@@ -79,10 +79,12 @@ The Logistics Monitoring System tracks IoT-enabled parcels in real-time, ensurin
 
 **Device Pool View**
 - Display all devices with current status
-- Show temperature and humidity readings
+- Show temperature, humidity and 6 IMU Parmeters (3-Axis Acc(X/Y/Z), 3-Axis Gyro(X/Y/Z)) readings
 - Display last activity timestamp
 - Filter devices by status (available, assigned, offline)
 <img width="1366" height="768" alt="Screenshot (222)" src="https://github.com/user-attachments/assets/53602fce-a53d-4cd4-b5ee-0b61a6542486" />
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/eba4b9dd-221f-4d54-a24c-ffb433b6f15d" />
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/575ccdfb-24b0-4d15-899c-9f5d13895f08" />
 
 
 
@@ -764,5 +766,6 @@ This project is licensed under the MIT License - see LICENSE file for details.
 
 **Last Updated**: November 2025
 **Project Status**: Active Development - Ready for Demo & Community Contributions
+
 
 
