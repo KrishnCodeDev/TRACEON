@@ -70,7 +70,6 @@ TRACEON is an end-to-end IoT system that monitors parcels in **real-time** and a
 **Specifications:**
 - Sensor read rate: Every 2 seconds
 - Data upload: 98.2% reliability
-- Battery life: 11.5 hours continuous
 - Operating temp: -10°C to 60°C
 
 [**→ Hardware Setup Guide**](firmware/HARDWARE_SETUP.md)
