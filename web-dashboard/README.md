@@ -1,4 +1,4 @@
-<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/9dad00de-1658-4905-b8fd-0574b619c282" /># Logistics Monitoring System - Web Interface and Dashboard
+# Logistics Monitoring System - Web Interface and Dashboard
 
 A comprehensive real-time web Interface and dashboard for monitoring IoT-enabled parcels throughout their entire logistics journey. Built with React, Vite, Firebase, and Tailwind CSS, this dashboard provides role-based access control for warehouse managers, transport agents, and parcel owners to track temperature, humidity, vibration, and location data.
 
