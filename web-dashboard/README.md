@@ -1,6 +1,8 @@
-# Logistics Monitoring System - Web Dashboard
+# Logistics Monitoring System - Web Interface and Dashboard
 
-A comprehensive real-time web dashboard for monitoring IoT-enabled parcels throughout their entire logistics journey. Built with React, Vite, Firebase, and Tailwind CSS, this dashboard provides role-based access control for warehouse managers, transport agents, and parcel owners to track temperature, humidity, vibration, and location data.
+A comprehensive real-time web Interface and dashboard for monitoring IoT-enabled parcels throughout their entire logistics journey. Built with React, Vite, Firebase, and Tailwind CSS, this dashboard provides role-based access control for warehouse managers, transport agents, and parcel owners to track temperature, humidity, vibration, and location data.
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/6ffc75d9-3a1b-4447-9c47-2879b281236d" />
 
 ## 📋 Table of Contents
 
@@ -80,20 +82,27 @@ The Logistics Monitoring System tracks IoT-enabled parcels in real-time, ensurin
 - Show temperature and humidity readings
 - Display last activity timestamp
 - Filter devices by status (available, assigned, offline)
-- **Add a screenshot showing the Device Pool table with device list, status indicators, and temperature/humidity readings.**
+<img width="1366" height="768" alt="Screenshot (222)" src="https://github.com/user-attachments/assets/53602fce-a53d-4cd4-b5ee-0b61a6542486" />
 
-**Create Parcel Modal**
-- Input parcel details (origin, destination, receiver info)
-- Set custom sensor thresholds
-- Select an available device from dropdown
-- Device dropdown shows only `status='available'` and `isOnline=true` devices
-- **Add a screenshot showing the Create Parcel Modal with form fields and device selection dropdown.**
+
 
 **Warehouse Dashboard**
 - Dashboard statistics (total devices, active parcels, offline devices)
 - Real-time parcel and device counts
 - Quick actions for parcel creation
 - System health overview
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/77a75fe2-62b8-415f-b101-20f7facf65a5" />
+
+
+
+**Create Parcel Modal**
+- Input parcel details (origin, destination, receiver info)
+- Set custom sensor thresholds
+- Select an available device from dropdown
+- Device dropdown shows only `status='available'` and `isOnline=true` devices
+<img width="1366" height="768" alt="Screenshot (164)" src="https://github.com/user-attachments/assets/2ec1f235-0f18-468e-8d0d-5dbf04f0a4be" />
+
+
 
 #### Workflow Steps
 1. Navigate to "Create Parcel" button
@@ -125,28 +134,27 @@ The Logistics Monitoring System tracks IoT-enabled parcels in real-time, ensurin
 - List of parcels awaiting pickup
 - Parcel details (origin, destination, weight, receiver)
 - Accept/Reject pickup functionality
-- **Add a screenshot showing the Assigned Parcels list with parcel cards and action buttons.**
 
 **Pickup Process** *(Open for Contribution)*
 - Confirm parcel pickup
 - Scan or verify parcel ID
 - Update parcel status to "In Transit"
 - Record pickup time and location
-- **Add a screenshot showing the Pickup confirmation screen with device assignment options.**
 
 **Transit Monitoring** *(Open for Contribution)*
 - Real-time sensor data during transit
 - Map view showing parcel location
 - Alert notifications for threshold violations
 - Temperature, humidity, vibration graphs
-- **Add a screenshot showing the real-time monitoring dashboard with sensor graphs and alert indicators.**
+<img width="1153" height="571" alt="image" src="https://github.com/user-attachments/assets/7a5ae704-657a-46fb-bc44-ba4d52b468de" />
+
 
 **Delivery Completion** *(Open for Contribution)*
 - Confirm delivery location
 - Obtain delivery signature or OTP verification
 - Update parcel status to "Delivered"
 - Retrieve device from parcel
-- **Add a screenshot showing the Delivery Confirmation form with location, signature, and device retrieval fields.**
+
 
 #### Workflow Steps *(To be Implemented)*
 1. View assigned parcels in transport dashboard
@@ -189,15 +197,18 @@ The Logistics Monitoring System tracks IoT-enabled parcels in real-time, ensurin
 - Current sensor readings (temperature, humidity, vibration)
 - Estimated delivery time
 - Real-time status updates
-- **Add a screenshot showing the parcel tracking map with live sensor readings overlay.**
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/8e5b4b42-0363-4061-a890-f37aa1142774" />
+
 
 **Parcel Details Modal**
 - Full parcel information (origin, destination, receiver)
 - Device information (device ID, sensor type)
-- Temperature and humidity graphs over time
+- Temperature, humidity and 6 IMU Parmeters (3-Axis Acc(X/Y/Z), 3-Axis Gyro(X/Y/Z)) graphs over time
 - Vibration data visualization
 - Alert history with timestamps
-- **Add a screenshot showing the detailed parcel modal with temperature/humidity graphs and alert history.**
+<img width="1152" height="563" alt="image" src="https://github.com/user-attachments/assets/c7dcfbb2-2c89-4f73-b374-5b35ee719df7" />
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/5cb6fe93-873d-42f8-8328-3b648df71420" />
+
 
 **Notifications**
 - Delivery status updates
@@ -227,31 +238,28 @@ The Logistics Monitoring System tracks IoT-enabled parcels in real-time, ensurin
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│                    WAREHOUSE MANAGER                             │
-│                    Creates Parcel                                │
-│                                                                  │
+│                    WAREHOUSE MANAGER                            │
+│                    Creates Parcel                               │
+│                                                                 │
 │  1. Navigate to Dashboard                                       │
 │  2. Click "Create Parcel" Button                                │
 │  3. Fill Parcel Details Form:                                   │
 │     - Receiver Name & Contact                                   │
 │     - Origin & Destination                                      │
 │     - Parcel Weight & Dimensions                                │
-│     - Custom Thresholds (Temp, Humidity, Vibration)            │
+│     - Custom Thresholds (Temp, Humidity, Vibration)             │
 │  4. Select Available Device from Dropdown                       │
 │  5. Click "Assign Device"                                       │
 │  6. System Updates:                                             │
 │     ✓ Creates parcel record in Firebase                         │
 │     ✓ Updates device status to "assigned"                       │
 │     ✓ Syncs thresholds to device firmware                       │
-│     ✓ Clears old alerts/history from previous parcel          │
+│     ✓ Clears old alerts/history from previous parcel            │
 │  7. Toast notification confirms success                         │
 │  8. Device visible in Device Pool with assigned status          │
-│                                                                  │
-│  📸 Screenshots Needed:                                         │
-│     - Dashboard home screen with Create Parcel button           │
-│     - Parcel creation form with all fields                      │
-│     - Device selection dropdown (filtered list)                 │
-│     - Success confirmation notification                         │
+│                                                                 |
+│                                                                 |
+|                                                                 │
 └─────────────────────────────────────────────────────────────────┘
 
 ┌─────────────────────────────────────────────────────────────────┐
@@ -263,15 +271,12 @@ The Logistics Monitoring System tracks IoT-enabled parcels in real-time, ensurin
 │    - Current Temperature & Humidity                             │
 │    - Online/Offline indicator                                   │
 │    - Last Seen timestamp                                        │
-│    - Assigned Parcel ID (if assigned)                          │
+│    - Assigned Parcel ID (if assigned)                           │
 │  • Devices stream live data from IoT sensors                    │
 │  • Automatic offline detection (>2 min no update)               │
 │  • Filter devices by status and online status                   │
-│                                                                  │
-│  📸 Screenshots Needed:                                         │
-│     - Device Pool table with multiple devices                   │
-│     - Device status indicators and color coding                 │
-│     - Temperature/humidity live readings                        │
+│                                                                 │
+│                                                                 │
 └─────────────────────────────────────────────────────────────────┘
 
 ┌─────────────────────────────────────────────────────────────────┐
@@ -283,14 +288,14 @@ The Logistics Monitoring System tracks IoT-enabled parcels in real-time, ensurin
 │  ├─ Accept/Reject pickup requests                              │
 │  ├─ Route optimization to pickup location                      │
 │  └─ Confirm device is operational at warehouse                 │
-│                                                                  │
+│                                                                │
 │  Phase 2: In-Transit Monitoring                                │
 │  ├─ Real-time sensor data streaming                            │
 │  ├─ Alert notifications for threshold breaches                 │
 │  ├─ Location tracking (GPS/Map integration)                    │
 │  ├─ Temperature/Humidity trend visualization                   │
 │  └─ Emergency alert handling                                   │
-│                                                                  │
+│                                                                │
 │  Phase 3: Delivery Completion                                  │
 │  ├─ Navigate to delivery address                               │
 │  ├─ Confirm delivery location (GPS/Manual)                     │
@@ -298,43 +303,35 @@ The Logistics Monitoring System tracks IoT-enabled parcels in real-time, ensurin
 │  ├─ Update parcel status to "Delivered"                        │
 │  ├─ Device validation and retrieval                            │
 │  └─ Generate delivery report with photos/notes                 │
-│                                                                  │
-│  📸 Screenshots Needed (when implemented):                      │
-│     - Assigned parcels list for transport agent                │
-│     - Real-time in-transit monitoring dashboard                │
-│     - Delivery confirmation screen with location               │
-│     - Delivery report generation                               │
-└─────────────────────────────────────────────────────────────────┘
+│                                                                │
+|                                                                │
+└────────────────────────────────────────────────────────────────┘
 
-┌─────────────────────────────────────────────────────────────────┐
-│                    PARCEL OWNER TRACKING                        │
-│                   (Real-Time Monitoring)                        │
-│                                                                  │
-│  1. Owner logs in to dashboard                                  │
+┌────────────────────────────────────────────────────────────────┐
+│                    PARCEL OWNER TRACKING                       │
+│                   (Real-Time Monitoring)                       │
+│                                                                │
+│  1. Owner logs in to dashboard                                 │
 │  2. Views "My Parcels" / "Track Parcels" section               │
-│  3. Parcel appears with:                                        │
+│  3. Parcel appears with:                                       │
 │     - Real-time status (In Warehouse/In Transit/Delivered)     │
 │     - Current location (if available)                          │
 │     - Current sensor readings                                  │
 │     - Estimated delivery time                                  │
-│  4. Click parcel to view detailed modal:                        │
+│  4. Click parcel to view detailed modal:                       │
 │     - Temperature graph over time                              │
 │     - Humidity graph over time                                 │
 │     - Vibration data                                           │
 │     - Alert history with breach details                        │
-│  5. Receive notifications:                                      │
+│  5. Receive notifications:                                     │
 │     - Parcel picked up from warehouse                          │
 │     - Temperature/Humidity threshold breached                  │
 │     - Parcel out for delivery                                  │
 │     - Delivery successful confirmation                         │
-│  6. Download delivery report                                    │
-│                                                                  │
-│  📸 Screenshots Needed:                                         │
-│     - Owner dashboard with active parcels list                 │
-│     - Parcel tracking with live sensor readings                │
-│     - Detailed parcel modal with graphs                        │
-│     - Notification/Alert examples                              │
-└─────────────────────────────────────────────────────────────────┘
+│  6. Download delivery report                                   │
+│                                                                │
+│                                                                │
+└────────────────────────────────────────────────────────────────┘
 ```
 
 ---
@@ -767,3 +764,4 @@ This project is licensed under the MIT License - see LICENSE file for details.
 
 **Last Updated**: November 2025
 **Project Status**: Active Development - Ready for Demo & Community Contributions
+
