@@ -251,7 +251,7 @@ The Logistics Monitoring System tracks IoT-enabled parcels in real-time, ensurin
 │  4. Select Available Device from Dropdown                       │
 │  5. Click "Assign Device"                                       │
 │  6. System Updates:                                             │
-│     ✓ Creates parcel record in Firebase                         │
+│     ✓ Creates parcel record in Firebase                         |
 │     ✓ Updates device status to "assigned"                       │
 │     ✓ Syncs thresholds to device firmware                       │
 │     ✓ Clears old alerts/history from previous parcel            │
@@ -263,9 +263,9 @@ The Logistics Monitoring System tracks IoT-enabled parcels in real-time, ensurin
 └─────────────────────────────────────────────────────────────────┘
 
 ┌─────────────────────────────────────────────────────────────────┐
-│                    DEVICE MONITORING                             │
-│                    (Warehouse Manager)                           │
-│                                                                  │
+│                    DEVICE MONITORING                            │
+│                    (Warehouse Manager)                          │
+│                                                                 │
 │  • Device Pool View shows real-time status:                     │
 │    - Device ID, Status (available/assigned)                     │
 │    - Current Temperature & Humidity                             │
@@ -279,11 +279,11 @@ The Logistics Monitoring System tracks IoT-enabled parcels in real-time, ensurin
 │                                                                 │
 └─────────────────────────────────────────────────────────────────┘
 
-┌─────────────────────────────────────────────────────────────────┐
-│              TRANSPORT AGENT WORKFLOW (TODO)                    │
-│           🔄 Open for Community Contribution                     │
-│                                                                  │
-│  Phase 1: Pickup Assignment                                     │
+┌────────────────────────────────────────────────────────────────┐
+│              TRANSPORT AGENT WORKFLOW (TODO)                   │
+│           🔄 Open for Community Contribution                   |
+│                                                                │
+│  Phase 1: Pickup Assignment                                    │
 │  ├─ View assigned parcels for today                            │
 │  ├─ Accept/Reject pickup requests                              │
 │  ├─ Route optimization to pickup location                      │
@@ -541,26 +541,26 @@ npm run lint
 ├──────────────────────────────────────────────────────────────┤
 │  Email: warehouse@logistics.com                              │
 │  Password: [configured in Firebase]                          │
-│  Role: admin                                                  │
+│  Role: admin                                                 │
 │  Access: Full dashboard, create parcels, manage devices      │
 └──────────────────────────────────────────────────────────────┘
 
 ┌──────────────────────────────────────────────────────────────┐
-│                    TRANSPORT AGENT                            │
+│                    TRANSPORT AGENT                           │
 ├──────────────────────────────────────────────────────────────┤
 │  Email: transport@logistics.com                              │
 │  Password: [configured in Firebase]                          │
-│  Role: transporter                                            │
+│  Role: transporter                                           │
 │  Access: Assigned parcels, in-transit monitoring (TODO)      │
 └──────────────────────────────────────────────────────────────┘
 
 ┌──────────────────────────────────────────────────────────────┐
-│                    PARCEL OWNER                               │
+│                    PARCEL OWNER                              │
 ├──────────────────────────────────────────────────────────────┤
 │  Email: owner@example.com                                    │
 │  Password: [configured in Firebase]                          │
-│  Role: owner                                                  │
-│  Access: Track own parcels, view real-time sensors          │
+│  Role: owner                                                 │
+│  Access: Track own parcels, view real-time sensors           │
 └──────────────────────────────────────────────────────────────┘
 ```
 
@@ -601,7 +601,7 @@ firebase-project/
 ├── parcels/
 │   ├── {parcelId}/
 │   │   ├── info: {
-│   │   │   ├── receiverName: "John Doe"
+│   │   │   ├── receiverName: "receiver"
 │   │   │   ├── receiverContact: "+1234567890"
 │   │   │   ├── origin: "Warehouse A"
 │   │   │   ├── destination: "City B"
@@ -764,4 +764,5 @@ This project is licensed under the MIT License - see LICENSE file for details.
 
 **Last Updated**: November 2025
 **Project Status**: Active Development - Ready for Demo & Community Contributions
+
 
