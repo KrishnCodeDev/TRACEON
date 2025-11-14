@@ -34,6 +34,10 @@ TRACEON is a smart parcel monitoring system built on ESP32-WROOM that tracks tem
 - **MPU6050 Address**: 0x68 (default)
 - **Pull-up Resistors**: Required (usually onboard)
 
+<img width="491" height="441" alt="Screenshot 2025-11-09 213030" src="https://github.com/user-attachments/assets/8e14bfe2-0358-426c-b8fe-09523dc5955d" />
+<img width="960" height="1280" alt="image" src="https://github.com/user-attachments/assets/1bddf7b6-fbbc-492d-9610-c9a5da86fe32" />
+
+
 ---
 
 ## 2. Initial Power-On & LED Status
@@ -51,51 +55,7 @@ TRACEON is a smart parcel monitoring system built on ESP32-WROOM that tracks tem
 
 ## 3. WiFi Configuration Methods
 
-### Method 1: Direct WiFi Access Point (Recommended)
-
-This is the easiest method when no saved WiFi is available or previously configured access point is not reachable.
-
-#### Steps:
-
-1. **Power on the device** and wait for the blinking LED pattern (approximately 3 seconds)
-
-2. **On your mobile device or computer, open WiFi settings and look for a new SSID named:**
-   ```
-   TRACEON_XXXXXX_Direct
-   ```
-   Where `XXXXXX` is the last 6 characters of the device's MAC address.
-
-3. **Connect to this WiFi with password:**
-   ```
-   traceon_setup
-   ```
-
-4. **Open a web browser and navigate to:**
-   ```
-   http://192.168.4.1
-   ```
-   
-   **Capture a screenshot of this initial WiFi configuration portal page.**
-
-5. **On the portal page, select your home/office WiFi network:**
-   - Look for available SSID list
-   - Select your WiFi network name
-   - Enter the WiFi password
-   - Click "Save"
-
-6. **The device will:**
-   - Attempt to connect to your WiFi
-   - Display connection status (LED pattern change)
-   - Store credentials for automatic reconnection
-
-#### Direct Access Point Benefits
-- **No WiFi router needed** - Works anywhere
-- **Simultaneous access** - Device can be both connected to your WiFi AND broadcast its own access point
-- **Fallback option** - Always available if main WiFi fails
-
----
-
-### Method 2: WiFiManager Captive Portal (Full Network Setup)
+### Method 1: WiFiManager Captive Portal (Recommended)
 
 If the direct AP method isn't accessible, the device still provides a captive portal after 3 minutes if WiFi connection fails.
 
@@ -118,7 +78,7 @@ If the direct AP method isn't accessible, the device still provides a captive po
 
 ---
 
-### Method 3: Resetting WiFi Settings
+### Method 2: Resetting WiFi Settings (alternate potion to change WiFi or in case Saved WiFi(AP) is not available)
 
 **To reset all saved WiFi credentials and force reconfiguration:**
 
@@ -428,5 +388,6 @@ Baud rate: **115200**
 
 ---
 
-*Last Updated: November 2024*
+*Last Updated: November 2025*
 *TRACEON Firmware v1.3*
+
