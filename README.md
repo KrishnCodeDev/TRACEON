@@ -7,7 +7,6 @@
 [![Firebase](https://img.shields.io/badge/Firebase-Integrated-orange.svg)](https://firebase.google.com/)
 [![React](https://img.shields.io/badge/React-18.2-blue.svg)](https://react.dev/)
 
-**📸 [Project hero image needed: ESP32 device with sensors mounted on a parcel box]**
 
 ---
 
@@ -268,11 +267,9 @@ This project is licensed under the MIT License - see Firmware [LICENSE](firmware
 
 ## 📚 Documentation
 
-- [Hardware Setup Guide](docs/README-Hardware.md)
-- [Web Dashboard Guide](docs/README-Dashboard.md)
-- [API Reference](docs/API.md)
-- [System Architecture](docs/ARCHITECTURE.md)
-- [Troubleshooting](docs/TROUBLESHOOTING.md)
+- [Hardware Setup Guide](firmware/HARDWARE_SETUP.md)
+- [Web Dashboard Guide](docs/web-dashboard/README.md)
+- [Contribution Guide](web-dashboard/.github/CONTRIBUTING.md)
 
 ---
 
